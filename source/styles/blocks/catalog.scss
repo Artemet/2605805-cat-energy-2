@@ -32,20 +32,24 @@
     background-color: $bg-grey;
   }
 
+  &__wrapper {
+    display: grid;
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 26px;
     border: none;
 
     &__wrapper {
-      display: flex;
-      flex-wrap: wrap;
+      grid-gap: 60px;
+      row-gap: 62px;
+      padding-bottom: 63px;
+      grid-template-columns: 1fr 1fr;
     }
 
     &__foot,
     &__item {
       @include pad-set(37px);
-      width: 45.75%;
-      margin-bottom: 63px;
     }
 
     &__foot {
@@ -81,9 +85,16 @@
   @media (min-width: $desktop-width) {
     padding-top: 29px;
 
+    &__wrapper {
+      grid-gap: 80px;
+      row-gap: 72px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
     &__foot,
     &__item {
-      width: 20.08%;
+      width: 100%;
+      max-width: 245px;
     }
   }
 }

@@ -1,8 +1,30 @@
 .demo {
+  position: relative;
   z-index: 2;
   padding-top: 13px;
   padding-bottom: 24px;
+  border-top: 1px solid #e6e6e6;
   background-color: $bg-grey;
+}
+
+.demo__inner {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #F2F2F2;
+}
+
+.demo__illustration--after {
+  direction: rtl;
+  left: auto;
+  top: 6px;
+  right: 0;
+  z-index: 10;
+  background-position-x: -28px;
+  transform: scaleX(-1);
 }
 
 .demo__title {
@@ -14,6 +36,9 @@
 
 .demo__text {
   margin-top: 0;
+  width: 100%;
+  font-family: "Lato", "Arial", sans-serif;
+  margin-bottom: 20px;
 }
 
 .demo__stats-list {
@@ -84,17 +109,72 @@
   display: flex;
   align-items: center;
   width: 100%;
+  height: 250px;
 }
+
 .demo__inner{
   height: 100%;
 }
 
-.demo__illustration {
-  height: 245px;
+.demo__image-switcher {
+  width: 4px;
+  background-color: #666666;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  /* Начальное положение */
+  top: 0;
+  z-index: 30;
+  border-radius: 2px;
+  cursor: ew-resize;
+  /* Изменяем курсор */
+}
 
+.demo__image-switcher::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18"><path d="M8 0L0 9L8 18V0Z" fill="%23666666"/><path d="M24 9L16 0V18L24 9Z" fill="%23666666"/></svg>');
+  width: 40px;
+  height: 40px;
+  padding: 7px 6px;
+  background-color: #fff;
+  border: 2px solid #666666;
+  border-radius: 50%;
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.demo__image-switcher:hover {
+  background-color: #68B738;
+
+}
+
+.demo__image-switcher:hover::after {
+  border: 2px solid #68B738;
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18"><path d="M8 0L0 9L8 18V0Z" fill="%2368B738"/><path d="M24 9L16 0V18L24 9Z" fill="%2368B738"/></svg>');
+}
+
+.demo__image-switcher:active {
+  background-color: #5EAA2F;
+  opacity: 0.9;
+}
+
+.demo__image-switcher:active::after {
+  border: 2px solid #5EAA2F;
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18"><path d="M8 0L0 9L8 18V0Z" fill="%235EAA2F"/><path d="M24 9L16 0V18L24 9Z" fill="%235EAA2F"/></svg>');
+}
+
+.demo__illustration {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 
   &--before {
+    top: 3px;
+    background-position: -6px 4px;
     background-image: url("../../images/before-mobile@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -112,6 +192,7 @@
 }
 
 .demo__progress {
+  margin-top: 20px;
   padding-bottom: 3px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -269,7 +350,7 @@
   }
 
   .demo__progress {
-    margin-top: 79px;
+    margin-top: 80px;
     overflow: unset;
 
     .demo__progress-toggle {
@@ -296,23 +377,11 @@
   }
 
   .demo__illustration {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
 
     &--before {
-      z-index: 20;
+      top: -12px;
+      background-position: 4px 4px;
       background-image: url("../../images/before-tablet@1x.png");
-      background-position-x: 0px;
-      background-position-y: 4px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../images/before-tablet@2x.png");
-      }
     }
 
     &--after {
@@ -321,27 +390,14 @@
       right: 0;
       z-index: 10;
       background-image: url("../../images/after-tablet@1x.png");
-      background-position-x: -11px;
+      top: 5px;
+      background-position-x: -47px;
       transform: scaleX(-1);
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../../images/after-tablet@1x.png");
       }
     }
-  }
-
-  .demo__illustration--before {
-    top: -12px;
-    background-position: 4px 4px;
-  }
-
-  .demo__illustration--after {
-    top: 5px;
-    background-position-x: -47px;
-  }
-
-  .demo__image-switcher {
-    top: 4px;
   }
 
   .demo__buttons-block {
@@ -540,15 +596,12 @@
   }
 
   .demo__image-switcher {
+    top: 50px;
     height: 512px;
   }
 
   .demo__progress {
     overflow: unset;
-  }
-
-  .demo__image-switcher {
-    top: 50px;
   }
 
   .demo__illustration--before {

@@ -12,6 +12,8 @@
 
 .instruction__list {
   @include list-unstyle;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .instruction__item {
@@ -48,10 +50,8 @@
   }
 
   .instruction__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    column-gap: 127px;
+    grid-template-columns: 1fr 1fr;
     padding-right: 68px;
 
     :nth-child(n+3) {
@@ -62,7 +62,6 @@
   .instruction__item {
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 40%;
     max-width: 300px;
     padding-bottom: 50px;
     margin-bottom: 83px;
@@ -127,7 +126,9 @@
   }
 
   .instruction__list {
+    grid-gap: 77px;
     padding-right: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .instruction__item {
@@ -137,5 +138,17 @@
     &--4 {
       background-position: right 0;
     }
+  }
+}
+
+@media (max-width: 1436px) {
+  .instruction__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .instruction__list {
+    grid-template-columns: 1fr;
   }
 }

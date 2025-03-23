@@ -1,0 +1,307 @@
+.add-catalog {
+  padding: 0 0 30px;
+
+  &__promo {
+    text-align: center;
+    padding-top: 65px;
+    padding-bottom: 44px;
+    margin-top: 34px;
+    background-image: url("../../images/gift-photo-mobile@1x.jpg");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &-text {
+      font-family: "Lato", "Arial", sans-serif;
+      font-size: 16px;
+      line-height: 1.2em;
+      color: #ffffff;
+      text-align: center;
+      width: 165px;
+      margin: 60px auto 0;
+    }
+  }
+
+  &__title {
+    @include title;
+    font-size: 24px;
+    line-height: 60px;
+    font-weight: normal;
+    color: #111111;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-top: 6px;
+    width: auto;
+    padding-right: 23px;
+    margin-bottom: 16px;
+    background-color: #ffffff;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 33px;
+      right: -20px;
+      width: 12%;
+      height: 3px;
+      background-color: $firmcolor;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      z-index: -1;
+      background-color: #68b738;
+      height: 3px;
+      position: absolute;
+      top: 16px;
+      left: -161px;
+    }
+  }
+
+  &__list {
+    border-top: 1px solid #cdcdcd;
+  }
+
+  &__icon-gift {
+    fill: #ffffff;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 0 65px;
+    overflow-x: hidden;
+
+    &__title {
+      @include minititle-t;
+      padding: 0 36px 0 38px;
+      margin-top: 0;
+      margin-bottom: 79px;
+      font-size: 32px;
+    }
+
+    &__promo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 91px;
+      padding-right: 110px;
+      padding-top: 62px;
+      padding-bottom: 71px;
+      margin-top: 69px;
+      background-image: url("../../images/gift-photo-tablet@1x.jpg");
+
+      &-text {
+        text-align: left;
+        width: 175px;
+        margin: 0;
+        margin-top: 7px;
+      }
+    }
+
+    &__title {
+      margin-top: 0;
+      font-size: 32px;
+      line-height: 36px;
+      padding-left: 39px;
+      padding-right: 36px;
+      margin-bottom: 78px;
+    }
+
+    &__wrapper::before {
+      width: 110%;
+      top: 14px;
+      right: -30px;
+    }
+
+    &__list {
+      border-left: 1px solid #cdcdcd;
+      border-right: 1px solid #cdcdcd;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 86px;
+
+    &__title {
+      padding-left: 0;
+      margin-bottom: 83px;
+      font-size: 40px;
+      margin-bottom: 83px;
+    }
+
+    &__promo {
+      flex-direction: column;
+      width: 245px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 62px;
+      padding-bottom: 46px;
+      margin-top: 0;
+      background-image: url("../../images/gift-photo-desktop@1x.jpg");
+
+      &-text {
+        text-align: center;
+      }
+    }
+
+    &__title {
+      font-size: 40px;
+      padding-left: 0;
+      margin-bottom: 83px;
+    }
+
+    &__wrapper::before {
+      width: 100%;
+      right: -40px;
+      top: 17px;
+    }
+
+    &__wrapper::after {
+      width: 10%;
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: center;
+      align-content: flex-start;
+    }
+
+    &__list {
+      width: 895px;
+      margin-right: 80px;
+      border: none;
+    }
+  }
+}
+
+
+.add-product {
+  padding-top: 14.5px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #cdcdcd;
+
+  &__title {
+    @include minititle;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 11px;
+  }
+
+  &__options {
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-spacing: 0;
+  }
+
+  &__options-cell {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    &--quantity {
+      text-align: left;
+    }
+
+    &--price {
+      text-align: right;
+    }
+  }
+
+  &__note {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 38px;
+    padding-right: 37px;
+    padding-top: 25px;
+    padding-bottom: 29px;
+
+    .two-figure-price {
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 20px;
+      width: 30%;
+      margin-bottom: 25px;
+    }
+
+    &__options {
+      position: relative;
+      font-size: 16px;
+      line-height: 20px;
+      width: 40%;
+      margin-top: 2px;
+      bottom: 8px;
+    }
+
+    &__options-cell {
+      &--quantity {
+        text-align: right;
+      }
+
+      &--price {
+        width: 50px;
+      }
+    }
+
+    &__note {
+      display: inline;
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    &:first-child {
+      border-top: 1px solid #cdcdcd;
+    }
+
+    &__title {
+      width: 245px;
+      margin: 0;
+      margin-right: 81px;
+    }
+
+    &__options {
+      width: 285px;
+      bottom: 0;
+      font-family: "Lato", "Arial", sans-serif;
+      margin-right: 39px;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    &__options-cell {
+      &--quantity {
+        text-align: left;
+      }
+    }
+
+    &__button {
+      width: 245px;
+    }
+  }
+}

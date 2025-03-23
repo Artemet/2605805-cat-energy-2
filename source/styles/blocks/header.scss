@@ -80,7 +80,7 @@
         position: absolute;
         left: 0;
         bottom: 14px;
-        width: 92%;
+        width: 100%;
         height: 2px;
         background-color: $firmcolor;
       }
@@ -185,6 +185,7 @@
 
   .header__logo {
     width: 173px;
+    margin-bottom: 6px;
 
     &--mobile {
       display: none;
@@ -238,6 +239,7 @@
 
   .header__logo {
     width: 202px;
+    margin-bottom: 0;
 
     &--tablet {
       display: none;
