@@ -71,6 +71,7 @@
       font-size: 20px;
       width: 160px;
       margin-top: 52px;
+      line-height: 20px;
       margin-bottom: 27px;
     }
 
@@ -87,8 +88,21 @@
 
     &__wrapper {
       grid-gap: 80px;
-      row-gap: 72px;
+      row-gap: 68px;
+      padding-bottom: 73px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    &__subtitle {
+      margin-top: 42px;
+    }
+
+    &__subtext {
+      margin-bottom: 90px;
+    }
+
+    &__foot {
+      padding-top: 50px;
     }
 
     &__foot,

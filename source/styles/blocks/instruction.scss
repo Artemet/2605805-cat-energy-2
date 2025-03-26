@@ -3,7 +3,7 @@
 
   &__title {
     @include title;
-    margin: 0 0 27px;
+    margin: 0 0 29px;
   }
 
   &__list {
@@ -36,17 +36,21 @@
   }
 
   &__text {
-    font-family: "Lato", sans-serif;
+    font-family: "Lato", "Arial", sans-serif;
     width: calc(100% - 80px);
     margin: 0;
   }
 
+  br {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 11px 0 49px;
+    padding: 14px 0 53px;
 
     &__title {
       font-size: 60px;
-      margin-bottom: 70px;
+      margin-bottom: 72px;
     }
 
     &__list {
@@ -59,12 +63,16 @@
       }
     }
 
+    br {
+      display: block;
+    }
+
     &__item {
       flex-wrap: wrap;
       align-items: flex-start;
       max-width: 300px;
       padding-bottom: 50px;
-      margin-bottom: 83px;
+      margin-bottom: 84px;
 
       &--1 {
         background-image: url("../../images/1@1x.png");
@@ -110,7 +118,7 @@
     &__illustration {
       width: 80px;
       height: 80px;
-      margin-bottom: 34px;
+      margin-bottom: 31px;
     }
 
     &__text {
@@ -122,7 +130,7 @@
     padding: 73px 0 25px;
 
     &__list {
-      grid-gap: 77px;
+      grid-gap: 78px;
       padding-right: 0;
       grid-template-columns: repeat(4, 1fr);
     }

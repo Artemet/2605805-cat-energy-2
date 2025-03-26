@@ -44,8 +44,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 52px;
+    padding-top: 50px;
     padding-bottom: 528px;
+    margin-top: 90px;
     background-image: url("../../images/index-can-tablet@1x.jpg");
     background-position: 30px 251px;
     background-size: 709px 609px;
@@ -91,6 +92,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 144px;
+    margin-top: 0;
     padding-bottom: 0;
     background-image: url("../../images/index-background-desktop@1x.jpg");
     background-position: 100% 0;
@@ -112,12 +114,12 @@
 
     &__title {
       order: 1;
-      margin-top: 79px;
+      margin-top: 80px;
     }
 
     &__text {
       order: 2;
-      margin-bottom: 50px;
+      margin-bottom: 49px;
     }
 
     &__button {
@@ -132,8 +134,8 @@
 
     &__image {
       display: inline-block;
-      width: 597px;
-      margin-left: -51px;
+      width: 600px;
+      margin-left: -52px;
     }
   }
 }

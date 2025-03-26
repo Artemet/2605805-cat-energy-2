@@ -11,7 +11,7 @@
       width: 39%;
       height: 3px;
       position: absolute;
-      top: 5px;
+      top: 7px;
       right: -20px;
       background-color: $firmcolor;
     }
@@ -66,12 +66,16 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 25px;
   }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 80px;
     overflow-x: hidden;
+
+    &__inner {
+      gap: 23px;
+    }
 
     &__title {
       @include minititle-t;
@@ -92,7 +96,7 @@
     padding-bottom: 100px;
 
     &__title {
-      margin-bottom: 73px;
+      margin-bottom: 74px;
       padding-left: 0;
       font-size: 40px;
     }
@@ -103,6 +107,7 @@
     }
 
     &__inner {
+      gap: 24px;
       justify-content: center;
       align-items: center;
     }
