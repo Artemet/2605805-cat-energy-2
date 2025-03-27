@@ -58,6 +58,7 @@
   &__nav {
     height: 0;
     opacity: 0;
+    z-index: 1;
     transition: height 0.5s, opacity 0.2s;
   }
 
@@ -91,7 +92,7 @@
       &--active {
         .header__menu-link {
           &::after {
-            bottom: -8px;
+            bottom: -6px;
             height: 2px;
           }
         }
@@ -129,7 +130,6 @@
     }
   }
 
-  // Модификаторы
   &__wrapper {
     &--show {
       .header__burger-icon {
@@ -165,12 +165,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 24px;
+    padding-top: 18px;
     border: none;
 
     &__wrapper {
       display: flex;
-      justify-content: space-between;
+      gap: 71px;
       align-items: center;
 
       &,
@@ -196,8 +196,8 @@
     }
 
     &__logo {
-      width: 173px;
-      margin-bottom: 6px;
+      width: 176px;
+      margin-bottom: 10px;
 
       &--mobile {
         display: none;
@@ -217,7 +217,8 @@
 
     &__menu {
       display: flex;
-      justify-content: space-between;
+      gap: 33px;
+      justify-content: end;
       align-items: center;
       width: 100%;
     }
@@ -230,7 +231,6 @@
     &__menu-link {
       font-size: 18px;
       line-height: 25px;
-      margin: 0px 5px 0 0;
     }
   }
 
@@ -293,6 +293,7 @@
     }
 
     &__wrapper {
+      gap: 510px;
       align-items: baseline;
     }
   }

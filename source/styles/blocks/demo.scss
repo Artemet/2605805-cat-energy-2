@@ -180,6 +180,9 @@
   }
 
   &__progress {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
     padding-bottom: 3px;
     overflow: hidden;
@@ -316,6 +319,8 @@
     }
 
     &__progress {
+      width: auto;
+      margin-right: unset;
       margin-top: 80px;
       overflow: unset;
 
@@ -460,15 +465,10 @@
 
     &__caption {
       display: flex;
-      justify-content: space-between;
-      width: 325px;
+      width: 340px;
+      gap: 65px;
       padding-left: 2px;
       text-align: left;
-    }
-
-    &__caption .amount-text-block {
-      position: relative;
-      left: 2px;
     }
 
     &__progress {
