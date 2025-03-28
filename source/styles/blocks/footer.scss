@@ -6,7 +6,7 @@
 
     &--logo {
       text-align: center;
-      padding: 42px 0 17px;
+      padding: 42px 0 15px;
     }
 
     &--copyright {
@@ -49,8 +49,7 @@
   &__developer-icon { fill: $footer-icon; }
 
   @media (min-width: $tablet-width) {
-    padding: 55px 0 55px;
-    height: 153px;
+    padding: 56.5px 0 56.5px;
 
     &__wrapper { display: flex; }
 
@@ -75,9 +74,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 169px;
-    padding-top: 70px;
-    padding-bottom: 67px;
+    padding-top: 69px;
+    padding-bottom: 66px;
 
     &__logo {position: unset;}
     &__block--copyright { padding-top: 0; }

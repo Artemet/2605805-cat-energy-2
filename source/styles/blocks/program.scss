@@ -1,18 +1,16 @@
 .program {
-  &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
-    @media (min-width: $tablet-width) {
-      position: relative;
-      padding-right: 260px;
-    }
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-right: 260px;
+  }
 
-    @media (min-width: $desktop-width) {
-      flex-direction: row;
-      padding-right: 0;
-    }
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    padding-right: 0;
   }
 
   &__illustration {
@@ -123,7 +121,7 @@
     }
   }
 
-  &__foot {
+  &__footer {
     padding-top: 19px;
 
     @media (min-width: $tablet-width) {
@@ -148,12 +146,24 @@
       }
     }
 
+    svg {
+      width: 22px;
+
+      @media (min-width: $tablet-width) {
+        width: 26px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 23px;
+      }
+    }
+
     &:active {
       opacity: 0.3;
     }
   }
 
-  &__catalog {
+  &__link-text {
     z-index: 1;
     font-size: 16px;
     line-height: 16px;
@@ -169,6 +179,10 @@
       font-size: 20px;
       line-height: 20px;
       padding-right: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 27px;
     }
   }
 
